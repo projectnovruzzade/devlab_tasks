@@ -1,0 +1,146 @@
+.btn {
+  background-color: #282B3A;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.btn.disabled {
+  background-color: #ccc;
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.btn.remove {
+  background: #AE2448;
+}
+
+
+.input {
+  padding: 10px;
+  border: 2px solid #282B3A;
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+}
+
+.card-item {
+  background-color: #021A54;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  cursor: grab;
+  user-select: none;
+  touch-action: none;
+}
+
+.card-item:active {
+  cursor: grabbing;
+}
+
+.card-item.dragging {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ! */
+
+.btn.add {
+  background-color: #C0E1D2;
+  color: #5D1C6A;
+}
+
+#app {
+  height: 100vh;
+  display: flex;
+  font-family: monospace;
+  justify-content: center;
+  align-items: center;
+}
+
+#app .container{
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 12px;
+  padding: 0 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #282B3A;
+  border-radius: 8px;
+}
+
+
+header h1 {
+  font-size: 24px;
+  color: #282B3A;
+}
+
+
+.add-to-card {
+  background-color: #282B3A;
+  color: white;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  display: none;
+  transform: scale(0.4);
+}
+
+.add-to-card.show {
+  transition: transform 0.3s ease;
+  display: block;
+  transform: scale(1);
+}
+
+
+.content {
+  margin-top: 10px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 10px;
+  padding: 12px;
+  background: #364779;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+
+.no-item {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+  }
+  #app {
+    height: auto;
+  }
+}
+
+@media (max-width: 524px) {
+  .card-container {
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+  }
+}

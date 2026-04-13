@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@dnd-kit/dom": "^0.3.2"
+  }
+}
